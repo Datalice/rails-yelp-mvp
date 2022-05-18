@@ -1,0 +1,13 @@
+<h1>All the restaurants</h1>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <% @restaurants.each do |resto| %>
+      <li><%= link_to resto.name, restaurant_path(resto)%> Style of food : <%= resto.category %></li>
+      <% end %>
+<br>
+<%= link_to 'Add restaurants', new_restaurant_path %>
+<br>
+    </div>
+  </div>
+</div>

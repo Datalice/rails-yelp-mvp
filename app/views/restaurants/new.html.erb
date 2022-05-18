@@ -1,0 +1,16 @@
+
+<div class=“container my-5”>
+  <div class=“row”>
+    <div class="col-sm-10 offset-sm-1 text-center">
+    <h1>Add a new restaurant</h1>
+      <div class=“col-3 mx-auto”>
+        <%= simple_form_for [@restaurant] do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :category, collection: Restaurant::CATEGORY %>
+          <%= f.submit "Submit restaurant", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
